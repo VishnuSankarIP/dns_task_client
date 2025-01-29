@@ -1,0 +1,13 @@
+.hero-section {
+    height: 40vh;
+    background-image: url('../../assets/images/hero.png'); /* This path assumes the image is in the public folder */
+    background-size: cover;
+    background-position: center;
+  }
+  .para{
+    font-family: "Kelly Slab", serif;
+    font-weight: 400;
+  }
+  .main-text{
+    font-family: "Oswald", serif;
+  }

@@ -1,0 +1,24 @@
+.btn-section {
+    height: 15vh;
+    background-image: url('../../assets/images/btndiv.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-section button {
+    padding: 10px 20px; 
+    margin: 0 10px;
+    background-color: #121618; 
+    border: #0056b3 1px solid;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-section button:hover {
+    background-color: #1b89ff; 
+}

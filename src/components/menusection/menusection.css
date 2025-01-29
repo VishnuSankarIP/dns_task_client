@@ -1,0 +1,123 @@
+.menu-section{
+    height: auto;
+    background-image: url('../../assets/images/menusection.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.left-frame,
+.right-frame {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%; 
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+.left-frame {
+    left: 0;
+    background-image: url('../../assets/images/Frameright.png');
+    background-repeat: no-repeat;
+}
+
+.right-frame {
+    /* right: -121px; */
+    right:0;
+    background-image: url('../../assets/images/Frameleft.png');
+    background-repeat: no-repeat;
+}
+.main-div {
+    border: 1px solid white;
+    max-width: 80%; /* Adjust the width as needed */
+    margin: 80px auto; /* Ensures the div is horizontally centered */
+   
+}
+.cocktail-decoration1{
+    position: absolute;
+    left: 110px;
+    top: -6rem;
+    width: 200px;
+    height: 200px;
+    background-image: url('../../assets/images/image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cocktail-decoration2{
+    position: absolute;
+    right: 110px;
+    bottom: -10px;
+    width: 150px;
+    height: 150px;
+    background-image: url('../../assets/images/cocktail.png');
+    background-size: contain;
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    color: white;
+    font-size: 1.25rem; 
+    font-weight: bold;
+  }
+  
+  .menu-name {
+    white-space: nowrap;
+  }
+  
+  .menu-price {
+    white-space: nowrap;
+  }
+  
+  .dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted white;
+    height: 1px;
+    margin: 0 10px;
+  }
+  
+  
+
+
+@media (max-width: 768px) {
+    .left-frame,
+    .right-frame {
+        display: none;
+    }
+   
+        .cocktail-decoration1 {
+            left: 30px; /* Adjust for smaller screen */
+            top: -4rem; /* Move closer to make it fit */
+            width: 150px; /* Reduce size */
+            height: 150px; /* Reduce size */
+        }
+    
+        .cocktail-decoration2 {
+            right: 40px; /* Adjust for smaller screen */
+            bottom: -40px; /* Shift closer to the bottom */
+            width: 120px; /* Reduce size */
+            height: 120px; /* Reduce size */
+        }
+    }
+    
+    /* Media query for extra small screens (e.g., phones) */
+    @media (max-width: 480px) {
+        .cocktail-decoration1 {
+            left: 20px; /* Further adjust for very small screens */
+            top: -2rem; /* Shift closer */
+            width: 100px; /* Further reduce size */
+            height: 100px;
+        }
+    
+        .cocktail-decoration2 {
+            right: 20px; /* Adjust for very small screens */
+            bottom: 0; /* Keep at bottom */
+            width: 100px; /* Further reduce size */
+            height: 100px;
+        }
+    }
+    
+
+

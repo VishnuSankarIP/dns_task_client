@@ -1,0 +1,9 @@
+
+.main-image {
+    position: absolute;
+    top: 1rem; /* Move the logo above the container */
+    transform: translateY(10%);
+  }
+.font-text{
+    font-size: xx-large;
+}

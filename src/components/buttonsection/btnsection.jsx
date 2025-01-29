@@ -43,7 +43,7 @@ function BtnSection({ onMenuSelect, activeMenuId }) {
     toast.error('Menu name should only contain letters.');
     return;
   }
-  
+
     try {
       const response = await axiosInstance.post('/menu', {
         name: menu.name,
@@ -67,7 +67,7 @@ function BtnSection({ onMenuSelect, activeMenuId }) {
 
   return (
     <div className="btn-section">
-      {menusData && menusData.length > 0 ? (
+      {/* {menusData && menusData.length > 0 ? (
         menusData.map((menuItem) => (
           <button
             key={menuItem._id}
@@ -82,7 +82,31 @@ function BtnSection({ onMenuSelect, activeMenuId }) {
       )}
       <button onClick={() => setIsModalOpen(true)}>
         <i className="fa-solid fa-plus"></i>
+      </button> */}
+      <div className="flex flex-wrap gap-2 overflow-x-auto md:justify-center p-2">
+  {menusData && menusData.length > 0 ? (
+    menusData.map((menuItem) => (
+      <button
+        key={menuItem._id}
+        onClick={() => onMenuSelect(menuItem)}
+        className={`px-4 py-2 text-sm md:text-base bg-gray-200 transition duration-300 ${
+          menuItem._id === activeMenuId ? 'bg-indigo-500 text-white' : 'hover:bg-gray-300'
+        }`}
+      >
+        {menuItem.name}
       </button>
+    ))
+  ) : (
+    <p className="text-gray-500">No menus available</p>
+  )}
+  <button
+    onClick={() => setIsModalOpen(true)}
+    className="px-3 py-2 bg-green-500 text-white  hover:bg-green-600 transition duration-300"
+  >
+    <i className="fa-solid fa-plus"></i>
+  </button>
+</div>
+
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-opacity-75 flex justify-center items-center z-50">
